@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS kanban_db;
+USE kanban_db;
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE tarefas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  id_usuario INT NOT NULL,
+  descricao TEXT NOT NULL,
+  setor VARCHAR(100) NOT NULL,
+  prioridade ENUM('Baixa','Média','Alta') NOT NULL,
+  data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  status ENUM('A Fazer','Fazendo','Pronto') NOT NULL DEFAULT 'A Fazer',
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+);
