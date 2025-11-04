@@ -23,61 +23,30 @@ nav a {
   background: white;
   padding: 20px;
   margin: 30px auto;
-  width: 400px;
+  width: 480px;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
 }
+label { display:block; margin-top:10px; }
 
-label {
-  display: block;
-  margin-top: 10px;
-}
+input, select, textarea, button { width:100%; padding:8px; margin-top:5px; box-sizing:border-box; }
 
-input, select, textarea, button {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-}
+button { background:#007BFF; color:white; border:none; margin-top:15px; cursor:pointer; border-radius:5px; }
 
-button {
-  background: #007BFF;
-  color: white;
-  border: none;
-  margin-top: 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background: #0056b3;
-}
+button:hover { background:#0056b3; }
 
 .success { color: green; }
+
 .error { color: red; }
 
-.kanban {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
-}
+.kanban { display:flex; justify-content:space-around; margin: 20px; gap: 10px; flex-wrap:wrap; }
 
-.coluna {
-  width: 30%;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px #ccc;
-}
+.coluna { width: 31%; min-width:250px; background:white; border-radius:10px; padding:10px; box-shadow: 0 0 10px #ccc; }
 
-.tarefa {
-  background: #e9ecef;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+.tarefa { background:#e9ecef; padding:10px; border-radius:8px; margin-bottom:10px; }
 
-.inline {
-  display: inline-block;
-  margin-top: 5px;
-}
+.inline { display:inline-block; margin-top:5px; }
+
+.topbar { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; padding:10px; }
+
+.small { font-size:0.9em; color:#555; }
