@@ -18,5 +18,6 @@ CREATE TABLE IF NOT EXISTS tarefas (
   data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   status ENUM('A Fazer','Fazendo','Pronto') NOT NULL DEFAULT 'A Fazer',
   FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+  ALTER TABLE usuarios ADD COLUMN senha VARCHAR(255) NOT NULL;
 );
 
