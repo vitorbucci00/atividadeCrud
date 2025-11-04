@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_result($id, $nome, $hash);
         if ($stmt->fetch()) {
             if (password_verify($senha, $hash)) {
-                // sucesso: cria sessão
+                
                 $_SESSION['user_id'] = $id;
                 $_SESSION['user_name'] = $nome;
                 header("Location: gerenciar_tarefas.php");
